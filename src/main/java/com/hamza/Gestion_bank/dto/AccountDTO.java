@@ -1,7 +1,7 @@
 package com.hamza.Gestion_bank.dto;
 
 import com.hamza.Gestion_bank.entities.Transaction;
-import com.hamza.Gestion_bank.entities.User;
+import com.hamza.Gestion_bank.entities.UserInfo;
 import jakarta.validation.constraints.Positive;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -16,7 +16,7 @@ public class AccountDTO {
     @Positive
     private BigDecimal solde;
 
-    private User user;
+    private UserInfo user;
 
     private List<Transaction> transactions;
 }

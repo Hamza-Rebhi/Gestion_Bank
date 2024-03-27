@@ -19,7 +19,7 @@ public class Account  extends  BaseEntity{
     @ManyToOne
     @JoinColumn(name = "user_id")
     @JsonIgnoreProperties("accounts")
-    private User user;
+    private UserInfo user;
     @OneToMany(mappedBy = "accountSource", cascade = CascadeType.ALL)
     @JsonIgnoreProperties("accountSource")
     private List <Transaction> transactions;

@@ -15,14 +15,16 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class User  extends  BaseEntity{
+public class UserInfo  extends  BaseEntity{
     @Column(nullable = false)
     private String nom;
     @Column(nullable = false,unique = true)
     private String email;
     @Column(nullable = false)
     private String password;
-    @OneToMany(mappedBy = "user",cascade = CascadeType.ALL)
-    @JsonIgnoreProperties("user")
-    private List<Account> accounts;
+    private String roles;
+
+    //@OneToMany(mappedBy = "user",cascade = CascadeType.ALL)
+    //@JsonIgnoreProperties("user")
+   // private List<Account> accounts;
 }
